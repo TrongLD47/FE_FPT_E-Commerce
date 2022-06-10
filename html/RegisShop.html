@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <!------------ CSS core ------------ -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css">
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+  <link rel="stylesheet" href="../assets/css/RegisShop.css">
+  <link rel="stylesheet" href="../assets/css/components/sideBar.css">
+  <link rel="stylesheet" href="../assets/css/components/header.css" />
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!------------- Add Mutiple Image -------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!--------------- form ------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- CND JQUERY -->
+  <!-- <link rel="stylesheet" href="../assets/css/base.css" /> -->
+
+  <!-- import HTML to HTML -->
+  <!-- <script src="https://unpkg.com/htmlincludejs"></script> -->
+
+</head>
+
+<body>
+  <header class="header-wrapper">
+    <div class="header fixed-header">
+        <!-- Header - bottom -->
+        <div class="header-bottom">
+
+            <!-- Header-left -->
+            <ul class="header-bottom-left">
+                <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                    <a class="menu-btn" href="javascript:void(0)" id="sidebarCollapse">
+                        <i class="bx bx-menu bx-sm"></i>
+                    </a>
+
+                </div>
+                <li class="header-bottom-logo">
+                    <a href="#">
+                        <img src="/assets/img/logo.svg" alt="logo" />
+                    </a>
+                </li>
+            </ul>
+            <!-- end Header-left -->
+            <!-- Header-right -->
+            <ul class="header-bottom-right">
+                <li class="header-bottom-right-item">
+                    <a href="#">
+                        <i class="far fa-bell"></i>
+                    </a>
+                </li>
+                <li class="header-bottom-right-item">
+                    <a href="#">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </li>
+                <li class="header-bottom-right-items user">
+                    <div class="header-bottom-right-item">
+                        <a href="#">
+                            <i class="far fa-user"></i>
+                        </a>
+                    </div>
+                    <div class="user-right">
+                        <a class="about-user" href="#">
+                            <span class="about-user-1">Tài khoản</span>
+                            <span class="about-user-2">Xin chào!</span>
+                        </a>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- end Header-right -->
+        </div>
+    </div>
+</header>
+  <div class="">
+    <div class="content-wrapper">
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+          <div class="col-sm-12 center-block col-xxl">
+            <form id="form-addProduct" class="card mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Product information</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <!-- Form Group -->
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-7">
+                      <div class="form-group"><label for="" class="input-label">Shop Name <i class="tio-help-outlined text-body ml-1"
+                        data-toggle="tooltip" data-placement="top"
+                        title=""></i></label>
+  
+                    <input type="text" class="form-control" name="" id=""
+                      placeholder="Shirt, t-shirts, etc." aria-label="" /></div>
+                  
+                     </div>
+                    </div>
+                    <div class="big-row">
+                    <div class="row">
+                      <div class="col-sm-7">
+                        <div class="form-group">
+                          <label for="email" class="input-label">Email</label>
+                          <div class="input-group input-group-merge">
+                         
+                            <input type="email" id="email" class="form-control" placeholder="abc@gmail.com"
+                              />
+                            
+                          </div>
+                        </div>
+                          </div>
+                      </div>
+
+
+                   <div class="row">
+                      <div class="col-sm-7">
+                        <div class="form-group">
+                          <label for="numbertelephone" class="input-label">Number Telephone</label>
+                          <div class="input-group input-group-merge">
+                         
+                            <input type="number" id="numbertelephone" class="form-control" placeholder=""
+                              />
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- End Form Group -->
+
+               
+                </div>
+
+           
+              
+                <!-- End Row -->
+               
+
+
+               
+
+                <div class="btn btnArond">
+                  <a onclick="clearForm()">
+                    <button type="button" class="btn btn-warning">Clear</button>
+                  </a>
+                  <a href="#">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                  </a>
+                  <a href="./ProductList.html">
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                  </a>
+                </div>
+
+              </div>
+              <!-- Body -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Upload Mutilple Image ===================== -->
+  <script>
+    jQuery(document).ready(function () {
+      ImgUpload();
+    });
+
+    function ImgUpload() {
+      var imgWrap = "";
+      var imgArray = [];
+
+      $('.upload__inputfile').each(function () {
+        $(this).on('change', function (e) {
+          imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+          var maxLength = $(this).attr('data-max_length');
+
+          var files = e.target.files;
+          var filesArr = Array.prototype.slice.call(files);
+          var iterator = 0;
+          filesArr.forEach(function (f, index) {
+
+            if (!f.type.match('image.*')) {
+              return;
+            }
+
+            if (imgArray.length > maxLength) {
+              return false
+            } else {
+              var len = 0;
+              for (var i = 0; i < imgArray.length; i++) {
+                if (imgArray[i] !== undefined) {
+                  len++;
+                }
+              }
+              if (len > maxLength) {
+                return false;
+              } else {
+                imgArray.push(f);
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                  var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+                  imgWrap.append(html);
+                  iterator++;
+                }
+                reader.readAsDataURL(f);
+              }
+            }
+          });
+        });
+      });
+
+      $('body').on('click', ".upload__img-close", function (e) {
+        var file = $(this).parent().data("file");
+        for (var i = 0; i < imgArray.length; i++) {
+          if (imgArray[i].name === file) {
+            imgArray.splice(i, 1);
+            break;
+          }
+        }
+        $(this).parent().parent().remove();
+      });
+    }
+  </script>
+
+  <!---------------  Import Header JS ---------------->
+  <script type="module" src="../assets/js/importPage.js"></script>
+
+
+  <!-- ============= Clear Button ============== -->
+  <script>
+    function clearForm() {
+      document.getElementById("form-addProduct").reset();
+    }
+  </script>
+</body>
+
+</html>

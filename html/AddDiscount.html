@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Discount</title>
+    <!------------ CSS core ------------ -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css">
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css">
+
+    <link rel="stylesheet" href="../assets/css/AddDiscount.css">
+    <!------------- Add Mutiple Image -------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!--------------- form ------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CND JQUERY -->
+    <!-- <link rel="stylesheet" href="../assets/css/base.css" /> -->
+
+    <!-- import HTML to HTML -->
+    <!-- <script src="https://unpkg.com/htmlincludejs"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <!-- ================= Import Header ============ -->
+        <include src="./components/Header.html"></include>
+    </header>
+
+    <div class="layout-page">
+        <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="row">
+                    <div class="col-sm-12 center-block col-xxl">
+                        <form id="form-addDiscount" class="card mb-3 mb-lg-5">
+                            <!-- Header -->
+                            <div class="card-header">
+                                <h4 class="card-header-title">Discount information</h4>
+                            </div>
+                            <!-- End Header -->
+    
+                            <!-- Body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="productNameLabel" class="input-label">Name
+                                            <i class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                                data-placement="top"></i>
+                                        </label>
+                                        <input type="text" class="form-control" name="productName" id="productNameLabel"
+                                            placeholder="Shirt01, t-shirts, etc." />
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="productPrice" class="input-label">Code Voucher</label>
+                                            </label>
+                                            <input type="text" class="form-control" name="productName" id="productNameLabel"
+                                                placeholder="#SE1406" />
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Form Group -->
+                                        <div class="form-group">
+                                            <label for="ValueOrder" class="input-label">Value Of The Order</label>
+                                            <input class="form-control" type="text" id="ValueOrder" placeholder="100$" />
+                                        </div>
+                                        <!-- End Form Group -->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- Form Group -->
+                                        <div class="form-group">
+                                            <label for="ValueDiscount" class="input-label">Value Of The Discount</label>
+                                            <input class="form-control" type="text" id="ValueDiscount" placeholder="10$" />
+                                        </div>
+                                        <!-- End Form Group -->
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Form Group -->
+                                        <div class="form-group">
+                                            <label for="html5-datetime-local-input" class="input-label">Start Date</label>
+                                            <input class="form-control" type="datetime-local" value=""
+                                                id="datetime-local-input" />
+                                        </div>
+                                        <!-- End Form Group -->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- Form Group -->
+                                        <div class="form-group">
+                                            <label for="html5-datetime-local-input" class="input-label">End Date</label>
+                                            <input class="form-control" type="datetime-local" value=""
+                                                id="html5-datetime-local-input" />
+                                        </div>
+                                        <!-- End Form Group -->
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="productDescription" class="input-label">Description</label>
+                                        <textarea class="form-control" id="productDescription" rows="7"></textarea>
+                                    </div>
+                                </div>
+    
+    
+    
+                                <div class="btn btnArond">
+                                    <a onclick="clearForm()">
+                                        <button type="button" class="btn btn-warning">Clear</button>
+                                    </a>
+                                    <a href="#">
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                    </a>
+                                    <a href="./DiscountList.html">
+                                        <button type="button" class="btn btn-danger">Cancel</button>
+                                    </a>
+                                </div>
+    
+                            </div>
+                            <!-- Body -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <!-- ================= Upload Mutilple Image ===================== -->
+    <script>
+        jQuery(document).ready(function () {
+            ImgUpload();
+        });
+
+        function ImgUpload() {
+            var imgWrap = "";
+            var imgArray = [];
+
+            $('.upload__inputfile').each(function () {
+                $(this).on('change', function (e) {
+                    imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+                    var maxLength = $(this).attr('data-max_length');
+
+                    var files = e.target.files;
+                    var filesArr = Array.prototype.slice.call(files);
+                    var iterator = 0;
+                    filesArr.forEach(function (f, index) {
+
+                        if (!f.type.match('image.*')) {
+                            return;
+                        }
+
+                        if (imgArray.length > maxLength) {
+                            return false
+                        } else {
+                            var len = 0;
+                            for (var i = 0; i < imgArray.length; i++) {
+                                if (imgArray[i] !== undefined) {
+                                    len++;
+                                }
+                            }
+                            if (len > maxLength) {
+                                return false;
+                            } else {
+                                imgArray.push(f);
+
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+                                    imgWrap.append(html);
+                                    iterator++;
+                                }
+                                reader.readAsDataURL(f);
+                            }
+                        }
+                    });
+                });
+            });
+
+            $('body').on('click', ".upload__img-close", function (e) {
+                var file = $(this).parent().data("file");
+                for (var i = 0; i < imgArray.length; i++) {
+                    if (imgArray[i].name === file) {
+                        imgArray.splice(i, 1);
+                        break;
+                    }
+                }
+                $(this).parent().parent().remove();
+            });
+        }
+    </script>
+
+    <!---------------  Import Header JS ---------------->
+    <script type="module" src="../assets/js/importPage.js"></script>
+
+
+    <!-- ============= Clear Button ============== -->
+    <script>
+        function clearForm() {
+            document.getElementById("form-addProduct").reset();
+        }
+    </script>
+</body>
+
+</html>

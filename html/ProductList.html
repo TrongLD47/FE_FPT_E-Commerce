@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+  <!------------ CSS core ------------ -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css">
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css">
+  <link rel="stylesheet" href="../assets/css/ProductList.css">
+
+  <!------------- Add Mutiple Image -------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"></script>
+
+  <!--------------- form ------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <!-- FontAwsome -->
+  <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+  <!-- Helpers -->
+  <script src="../assets/vendor/js/helpers.js"></script>
+  <!---------------  Import Header JS ---------------->
+  <script type="module" src="../assets/js/importPage.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <!-- ================= Import Header ============ -->
+    <include src="./components/Header.html"></include>
+  </header>
+
+  <div class="layout-page">
+    <!-- Content wrapper -->
+    <div class="content-wrapper">
+      <!-- Content -->
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+          <div class="col-xxl col-sm-12">
+            <form class="" action="">
+
+              <div class="card mb-4 ">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-group">                     
+                        <select id="ddlViewBy" class="btn btn-outline-primary dropdown-input dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                          <option class="dropdown-item" value="1">Product Name</option>
+                          <option class="dropdown-item" value="2">Product ID</option>
+                          <option class="dropdown-item" value="3">Size</option>
+                        </select>
+                      <input type="text" class="form-control" aria-label="Text input with dropdown button" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="categoryName" class="input-label">Category</label>
+                      <input type="text" class="form-control" name="Brand" id="categoryName"
+                        placeholder="Nike, Adidas, Inc" aria-label="eg. 348121032">
+                    </div>
+                  </div>
+                </div>
+                  <div class="row pad-top">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="categoryName" class="input-label-01">Stock</label>
+                          <input type="number" class="form-control" name="Brand" id="categoryName"
+                            placeholder="from" aria-label="eg. 348121032">
+                          <span>-</span>
+                          <input type="number" class="form-control" name="Brand" id="categoryName"
+                            placeholder="to" aria-label="eg. 348121032">
+                        </div>
+                     
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="categoryName" class="input-label-02">Sales</label>
+                        <input type="number" class="form-control" name="Brand" id="categoryName"
+                          placeholder="from" aria-label="eg. 348121032">
+                        <span>-</span>
+                        <input type="number" class="form-control" name="Brand" id="categoryName"
+                          placeholder="to" aria-label="eg. 348121032">
+                      </div>
+                   
+                  </div>
+                  </div>
+               
+              </div>
+
+
+              <div class="card mb-4 ">
+                <div class="header-table">
+                  <h4 class="card-header">Product List</h4>
+                  <div class="btnArond">
+                    <a href="./AddProduct.html">
+                      <button type="button" class="button btn primary">
+                        <i class="fas fa-plus icon-fas"></i>
+                        <span>Add New Product</span>
+                      </button>
+                    </a>
+                    <!-- <button type="button" class="btn btn-primary"><i class="fas fa-plus icon-fas"></i>Add Sub-Category</button> -->
+                  </div>
+                </div>
+                <div class=" table-responsive text-nowrap">
+                  <table class="table table-hover">
+                    <thead class="table-light">
+                      <tr>
+                        <th><input type="checkbox" name="" value="" id="checkedAll" /></th>
+                        <th>PRODUCT</th>
+                        <th>IMAGE</th>
+                        <th>CODE</th>
+                        <th>CATEGORY</th>
+                        <th>SUBCATEGORY</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>Actions</th>
+
+                      </tr>
+                    </thead>
+                    <tbody class=" table-border-bottom-0">
+                      <tr>
+                        <td><input type="checkbox" name="" value="1" class="checkSingle" /></td>
+                        <td>Áo thun fpt</td>
+                        <td>ảnh </td>
+                        <td>1111</td>
+                        <td>Áo</td>
+                        <td>ÁO thun</td>
+                        <td>1111$</td>
+                        <td>gucci</td>
+
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="./AddProduct.html"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="" value="1" class="checkSingle" /></td>
+                        <td>Áo thun fpt</td>
+                        <td>ảnh </td>
+                        <td>1111</td>
+                        <td>Áo</td>
+                        <td>ÁO thun</td>
+                        <td>1111$</td>
+                        <td>gucci</td>
+
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="./AddProduct.html"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="" value="1" class="checkSingle" /></td>
+                        <td>Áo thun fpt</td>
+                        <td>ảnh </td>
+                        <td>1111</td>
+                        <td>Áo</td>
+                        <td>ÁO thun</td>
+                        <td>1111$</td>
+                        <td>gucci</td>
+
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="./AddProduct.html"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="" value="1" class="checkSingle" /></td>
+                        <td>Áo thun fpt</td>
+                        <td>ảnh </td>
+                        <td>1111</td>
+                        <td>Áo</td>
+                        <td>ÁO thun</td>
+                        <td>1111$</td>
+                        <td>gucci</td>
+
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="./AddProduct.html"><i class="bx bx-edit-alt me-1"></i>
+                                Edit</a>
+                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- / Content -->
+  </div>
+
+
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/js/menu.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <!-- ================= Upload Mutilple Image ===================== -->
+  <script>
+    jQuery(document).ready(function () {
+      ImgUpload();
+    });
+
+    function ImgUpload() {
+      var imgWrap = "";
+      var imgArray = [];
+
+      $('.upload__inputfile').each(function () {
+        $(this).on('change', function (e) {
+          imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+          var maxLength = $(this).attr('data-max_length');
+
+          var files = e.target.files;
+          var filesArr = Array.prototype.slice.call(files);
+          var iterator = 0;
+          filesArr.forEach(function (f, index) {
+
+            if (!f.type.match('image.*')) {
+              return;
+            }
+
+            if (imgArray.length > maxLength) {
+              return false
+            } else {
+              var len = 0;
+              for (var i = 0; i < imgArray.length; i++) {
+                if (imgArray[i] !== undefined) {
+                  len++;
+                }
+              }
+              if (len > maxLength) {
+                return false;
+              } else {
+                imgArray.push(f);
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                  var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+                  imgWrap.append(html);
+                  iterator++;
+                }
+                reader.readAsDataURL(f);
+              }
+            }
+          });
+        });
+      });
+
+      $('body').on('click', ".upload__img-close", function (e) {
+        var file = $(this).parent().data("file");
+        for (var i = 0; i < imgArray.length; i++) {
+          if (imgArray[i].name === file) {
+            imgArray.splice(i, 1);
+            break;
+          }
+        }
+        $(this).parent().parent().remove();
+      });
+    }
+  </script>
+
+
+  <!----------------All Checked -------------------->
+  <script src="../assets/js/checkAll.js"></script>
+
+  <!-- ============= Clear Button ============== -->
+  <script>
+    function clearForm() {
+      document.getElementById("form-addProduct").reset();
+    }
+  </script>
+
+  <script>
+    var e = document.getElementById("ddlViewBy");
+    function show() {
+      var as = document.forms[0].ddlViewBy.value;
+      var strUser = e.options[e.selectedIndex].value;
+      console.log(as, strUser);
+    }
+    e.onchange = show;
+    show();
+  </script>
+</body>
+
+</html>

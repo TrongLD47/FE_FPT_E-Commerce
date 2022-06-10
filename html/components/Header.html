@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="/assets/css/components/sideBar.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css" />
+    <!--------------- form ------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- require -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./assets/css/base.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--========== Header JS ==========-->
+    <script src="/assets/js/header.js"></script>
+    <title>header</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-wrapper">
+            <div class="header fixed-header">
+                <!-- Header - bottom -->
+                <div class="header-bottom">
+
+                    <!-- Header-left -->
+                    <ul class="header-bottom-left">
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                            <a class="menu-btn" href="javascript:void(0)" id="sidebarCollapse">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+
+                        </div>
+                        <li class="header-bottom-logo">
+                            <a href="#">
+                                <img src="/assets/img/logo.svg" alt="logo" />
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end Header-left -->
+                    <!-- Header-right -->
+                    <ul class="header-bottom-right">
+                        <li class="header-bottom-right-item">
+                            <a href="#">
+                                <i class="far fa-bell"></i>
+                            </a>
+                        </li>
+                        <li class="header-bottom-right-item">
+                            <a href="#">
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        </li>
+                        <li class="header-bottom-right-items user">
+                            <div class="header-bottom-right-item">
+                                <a href="#">
+                                    <i class="far fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="user-right">
+                                <a class="about-user" href="#">
+                                    <span class="about-user-1">Tài khoản</span>
+                                    <span class="about-user-2">Xin chào!</span>
+                                </a>
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- end Header-right -->
+                </div>
+            </div>
+        </header>
+        <!-- end Header -->
+        <!--========== NAV ==========-->
+        <aside class="nav" id="layout-menu">
+            <nav class="nav__container " id="layout-navbar">
+
+                <div class="list-group">
+                    <!-- <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon'></i>
+                        <span class="nav__logo-name">FPT E-Commerce</span>
+                    </a> -->
+
+                    <div id="wrapper-navbar">
+                        <div class="nav__list">
+                            <div class="nav__items">
+                                <div class="top-nav">
+                                    <h3 class="nav__subtitle">Menu</h3>
+                                </div>
+                                <a href="#" class="nav__link active">
+                                    <i class='bx bx-home nav__icon'></i>
+                                    <span class="nav__name">Home</span>
+                                </a>
+
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class='bx bx-closet nav__icon'></i>
+                                        <span class="nav__name">Product</span>
+                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                    </a>
+
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="/html/ProductList.html" class="nav__dropdown-item">My Products</a>
+                                            <a href="/html/AddProduct.html" class="nav__dropdown-item">Add New
+                                                Product</a>
+                                            <a href="#" class="nav__dropdown-item">Product Banned</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class='bx bx-task nav__icon'></i>
+                                        <span class="nav__name">Order</span>
+                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                    </a>
+
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="/html/OrderList.html" class="nav__dropdown-item">My Orders</a>
+                                            <a href="/html/OrderCancelList.html"
+                                                class="nav__dropdown-item">Cancellation</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="/html/DiscountList.html" class="nav__link">
+                                    <i class='bx bxs-discount nav__icon'></i>
+                                    <span class="nav__name">Discount</span>
+                                </a>
+                                <a href="#" class="nav__link">
+                                    <i class=' bx bxs-bar-chart-square nav__icon'></i>
+                                    <span class="nav__name">Report</span>
+                                </a>
+                            </div>
+                            <div class="nav__items">
+                                <h3 class="nav__subtitle">Setting</h3>
+                                <!-- 
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class='bx bx-bell nav__icon'></i>
+                                        <span class="nav__name">Notifications</span>
+                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                    </a>
+    
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="#" class="nav__dropdown-item">Blocked</a>
+                                            <a href="#" class="nav__dropdown-item">Silenced</a>
+                                            <a href="#" class="nav__dropdown-item">Publish</a>
+                                            <a href="#" class="nav__dropdown-item">Program</a>
+                                        </div>
+                                    </div>
+    
+                                </div> -->
+
+                                <a href="#" class="nav__link">
+                                    <i class=' bx bx-user nav__icon'></i>
+                                    <span class="nav__name">Shop Profile</span>
+                                </a>
+                                <!-- <a href="#" class="nav__link">
+                                    <i class='bx bx-bookmark nav__icon'></i>
+                                    <span class="nav__name">Saved</span>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------ Log Out -------------->
+                <!-- <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon'></i>
+                    <span class="nav__name">Log Out</span>
+                </a> -->
+
+            </nav>
+            </á>
+    </div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#layout-menu').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
