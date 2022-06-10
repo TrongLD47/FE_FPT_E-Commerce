@@ -1708,6 +1708,11 @@ color:  #ca56c8;
   margin: 0 8px;
   text-align: center;
 }
+.button.primary:hover{
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
 
 :root {
   --swiper-theme-color: linear-gradient(135deg, #ed55c7, #6756ca) !important;

@@ -6,6 +6,7 @@
   --header-height: 3.5rem;
   --nav-width: 230px;
   --theme-color: linear-gradient(135deg, #ed55c7, #6756ca);
+  --theme-light-color: linear-gradient(135deg, #fce6f7, #d5d0f0);
 
   /*========== Colors ==========*/
   --first-color: #696cff;

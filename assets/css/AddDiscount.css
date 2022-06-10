@@ -2,14 +2,24 @@
 
 .content-wrapper{
     align-items: center;
-    margin-top: -1% !important;
+    margin-top: -4% !important;
 }
 .btnArond{
     float: right;
+    display: flex;
+    align-items: center;
 }
 .btnArond button{
     margin: 20px 0px 0px 20px;
 }
+.btnArond .btn-warning{
+    margin-right: 20px;
+}
+.btnArond .primary{
+    height: 40px;
+    margin-top: 20px
+}
+
 .dropdown-cate{
     margin-bottom: 20px;
 }

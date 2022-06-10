@@ -1,13 +1,19 @@
 @import url("../css/root.css");
 
-  .layout-demo-info {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  .content-wrapper{
-    margin-top: -1%;
+.layout-page {
+  margin-top: -2%;
 }
-.header-table{
+
+.layout-demo-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.content-wrapper {
+  margin-top: -1%;
+}
+
+.header-table {
   display: flex;
   width: 100%;
   align-items: center;
@@ -16,20 +22,19 @@
 
 
 /* ============= MEDIA =========== */
-@media screen and (max-width: 700px){
-  
-  .btnArond button span{
-    display: none; 
+@media screen and (max-width: 700px) {
+
+  .btnArond button span {
+    display: none;
   }
-  .icon-fas{
+
+  .icon-fas {
     margin: 0;
   }
 }
-@media (min-width: 1200px){
-  .layout-page{
-      padding-left: 14.25rem;
+
+@media (min-width: 1200px) {
+  .layout-page {
+    padding-left: 14.25rem;
   }
 }
-
-
-

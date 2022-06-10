@@ -1,3 +1,4 @@
+Nguyễn Trung Hiếu
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,9 +44,9 @@
                     <!-- Header-left -->
                     <ul class="header-bottom-left">
                         <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-                            <a class="menu-btn" href="javascript:void(0)" id="sidebarCollapse">
-                                <i class="bx bx-menu bx-sm"></i>
-                            </a>
+                            <a href="#menu-toggle" class="btn btn-default menu-toggle"><i
+                                    class="bx bx-menu bx-sm"></i></a>
+
 
                         </div>
                         <li class="header-bottom-logo">
@@ -92,10 +93,7 @@
             <nav class="nav__container " id="layout-navbar">
 
                 <div class="list-group">
-                    <!-- <a href="#" class="nav__link nav__logo">
-                        <i class='bx bxs-disc nav__icon'></i>
-                        <span class="nav__logo-name">FPT E-Commerce</span>
-                    </a> -->
+
 
                     <div id="wrapper-navbar">
                         <div class="nav__list">
@@ -152,44 +150,17 @@
                             </div>
                             <div class="nav__items">
                                 <h3 class="nav__subtitle">Setting</h3>
-                                <!-- 
-                                <div class="nav__dropdown">
-                                    <a href="#" class="nav__link">
-                                        <i class='bx bx-bell nav__icon'></i>
-                                        <span class="nav__name">Notifications</span>
-                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                                    </a>
-    
-                                    <div class="nav__dropdown-collapse">
-                                        <div class="nav__dropdown-content">
-                                            <a href="#" class="nav__dropdown-item">Blocked</a>
-                                            <a href="#" class="nav__dropdown-item">Silenced</a>
-                                            <a href="#" class="nav__dropdown-item">Publish</a>
-                                            <a href="#" class="nav__dropdown-item">Program</a>
-                                        </div>
-                                    </div>
-    
-                                </div> -->
+
 
                                 <a href="#" class="nav__link">
                                     <i class=' bx bx-user nav__icon'></i>
                                     <span class="nav__name">Shop Profile</span>
                                 </a>
-                                <!-- <a href="#" class="nav__link">
-                                    <i class='bx bx-bookmark nav__icon'></i>
-                                    <span class="nav__name">Saved</span>
-                                </a> -->
+
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!------------ Log Out -------------->
-                <!-- <a href="#" class="nav__link nav__logout">
-                    <i class='bx bx-log-out nav__icon'></i>
-                    <span class="nav__name">Log Out</span>
-                </a> -->
-
             </nav>
             </á>
     </div>
@@ -197,13 +168,28 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#layout-menu').toggleClass('active');
-            });
+    <script>
+        $(".menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#layout-menu").toggleClass("toggled");
         });
+
     </script>
+    <style>
+        #layout-menu.toggled {
+            padding-left: 0;
+            margin-left: -100px;
+        }
+
+        #layout-menu.toggled {
+            width: 0;
+        }
+
+        #layout-menu.toggled {
+            position: relative;
+            margin-right: 0;
+        }
+    </style>
 </body>
 
 </html>
