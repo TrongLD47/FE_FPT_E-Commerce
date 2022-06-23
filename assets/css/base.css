@@ -1719,6 +1719,7 @@ color:  #ca56c8;
   --theme-color: linear-gradient(135deg, #ed55c7, #6756ca);
   --theme-light-color: linear-gradient(135deg, #fce6f7, #d5d0f0);
   --white: #fbfbfb;
+  --bg-light: #f9f9f9;
   --bg-semi-light: #ebebeb;
   --text-white: #e6e6e6;
   --text-semi-white: #b3b3b3;
@@ -1731,8 +1732,13 @@ color:  #ca56c8;
   --pd-section: 24px 40px;
   --boder-color: #cccccc78;
   --border-color: #cccccc78;
+  --bg-dark: rgba(16, 16, 16, 0.05);
   --hr-color: #1010101a;
   --divider-light: #ccc;
+  --box-shadow: 0 -4px 8px rgb(16 16 16 / 5%);
+  --warning: #fe252c;
+  --danger: #fc424a;
+  --success: #00d25b;
   --instagram: radial-gradient(
       circle farthest-corner at 35% 90%,
       #fec564,
@@ -1830,4 +1836,59 @@ color:  #ca56c8;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+@keyframes spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 25rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border-top: 5px solid #646be6;
+  transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: 0.9s spin infinite;
+}
+.loader-inner::before {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border-left: 3px solid #00ff73;
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: 0.7s spin infinite;
+}
+.loader-inner::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border-bottom: 4px solid #ff0055;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: 0.5s spin infinite;
 }

@@ -15,8 +15,7 @@
   justify-content: space-between;
 }
 .btnArond button{
-  margin-left: 20px;
-
+  margin: 0 10px; 
 }
 
 

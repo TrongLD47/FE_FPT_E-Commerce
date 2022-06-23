@@ -1,13 +1,11 @@
-.footer {
-}
 .footer_top {
   background-color: #101010;
   padding: 1.5rem 4rem;
 }
 .footer_top-item {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 3rem;
 }
 .footer_bot {
@@ -16,9 +14,6 @@
   font-size: 1.4rem;
   text-align: center;
   color: var(--text-color);
-}
-
-.block_wrapper {
 }
 
 .block_item.logo,
@@ -42,8 +37,6 @@
 .block-app-list {
   display: flex;
   gap: 2rem;
-}
-.block-app-item {
 }
 .block-app-item i {
   font-size: 3rem;
@@ -118,7 +111,7 @@
   width: 1px;
   flex: 1;
   padding: 1rem 2rem;
-  font-size: 1.6rem;
+  font-size: 14px;
   color: var(--text-white);
   background-color: transparent;
   outline: none;

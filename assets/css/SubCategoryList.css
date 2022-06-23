@@ -18,8 +18,7 @@
  
 }
 .btnArond button{
-  margin-left: 20px;
-
+  margin: 0 10px; 
 }
 .header-table{
 display: flex;

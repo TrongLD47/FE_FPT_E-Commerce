@@ -2,12 +2,13 @@
 
 .content-wrapper{
     align-items: center;
-    margin-top: -4% !important;
+    margin-top: -1.5% !important;
 }
 .btnArond{
     float: right;
     display: flex;
-    align-items: center;
+    align-items: center;  
+    margin-bottom: 1rem;
 }
 .btnArond button{
     margin: 20px 0px 0px 20px;
@@ -41,6 +42,6 @@
 
 @media (min-width: 1200px){
     .layout-page{
-        padding-left: 14.25rem;
+        padding-left: 14.5rem;
     }
   }

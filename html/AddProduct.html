@@ -20,11 +20,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <!-- CND JQUERY -->
-  <!-- <link rel="stylesheet" href="../assets/css/base.css" /> -->
-
-  <!-- import HTML to HTML -->
-  <!-- <script src="https://unpkg.com/htmlincludejs"></script> -->
+  <!-------------- SummerNote ------------>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <link href="../assets/vendor/libs/summernote/summernote-bs4.min.css" rel="stylesheet">
+    <script src="../assets/vendor/libs/summernote/summernote-bs4.min.js"></script>
 
 </head>
 
@@ -35,9 +39,9 @@
   </header>
   <div class="layout-page">
     <div class="content-wrapper">
-      <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="col-sm-12 flex-grow-1 container-p-y">
         <div class="row">
-          <div class="col-sm-12 center-block col-xxl">
+          <div class="center-block col-xxl">
             <form id="form-addProduct" class="card mb-3 mb-lg-5">
               <!-- Header -->
               <div class="card-header">
@@ -130,7 +134,7 @@
                   </div>
                 </div>
 
-                <!-- End Row -->
+
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="mb-3 form-group">
@@ -162,76 +166,145 @@
                     <div class="form-group ">
                       <label class="input-label d-block">Size</label>
                       <div class="checkbox-size">
-                        <div class="row">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeXS" value="sizeXS" />
-                            <label class="form-check-label" for="sizeXS">XS</label>
+
+                        <div class="size-left">
+                          <div class="size-wrap ">
+                            <div class="size-tile">
+                              <input type="checkbox" value="sizexs" class="form-check-input check-inline  check item"
+                                id="sizexs">
+                              <span>XS</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" class="form-control sizexs" placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeS" value="sizeS" />
-                            <label class="form-check-label" for="sizeS">S</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeM" value="sizeM" />
-                            <label class="form-check-label" for="sizeL">M</label>
+                          <div class="size-wrap">
+                            <div class="size-tile tile-right">
+                              <input type="checkbox" id="sizes" value="sizes"
+                                class="form-check-input check-inline  check item">
+                              <span>S</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" class="form-control sizes" placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeL" value="sizeL" />
-                            <label class="form-check-label" for="sizeL">L</label>
+
+                        <div class="size-center">
+                          <div class="size-wrap ">
+                            <div class="size-tile">
+                              <input type="checkbox" id="sizem" value="sizem"
+                                class="form-check-input check-inline  check item">
+                              <span>M</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" class="form-control sizem" placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeXL" value="sizeXL" />
-                            <label class="form-check-label" for="sizeL">XL</label>
+                          <div class="size-wrap ">
+                            <div class="size-tile tile-right">
+                              <input type="checkbox" id="sizel" value="sizel"
+                                class="form-check-input check-inline  check item">
+                              <span>L</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" name="qty" class="sizel form-control"
+                                    placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input check-inline" type="checkbox" id="sizeXXL" value="sizeXXL" />
-                            <label class="form-check-label" for="sizeXXL">XXL</label>
+                        </div>
+
+                        <div class="size-right">
+                          <div class="size-wrap ">
+                            <div class="size-tile ">
+                              <input type="checkbox" id="sizexl" value="sizexl"
+                                class="form-check-input check-inline  check item">
+                              <span>XL</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" class="sizexl form-control" placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
+
+
+                          <div class="size-wrap ">
+                            <div class="size-tile tile-right">
+                              <input type="checkbox" id="sizexxl" value="sizexxl"
+                                class="form-check-input check-inline  check item">
+                              <span>XXL</span>
+                            </div>
+                            <div class="">
+                              <div class=" cost-box">
+                                <div class="">
+                                  <input type="number" class="sizexxl form-control" placeholder="Enter Quantity" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
                         </div>
 
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group">
-                    <label for="productDescription" class="input-label">Description</label>
-                    <textarea class="form-control" id="productDescription" rows="7"></textarea>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group">
-                    <label class="input-label">Product Image</label>
-                    <div class="upload__box">
-                      <div class="upload__btn-box">
-                        <label class="upload__btn">
-                          <p>Upload images</p>
-                          <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
-                        </label>
-                      </div>
-                      <div class="upload__img-wrap"></div>
+                  <div class="">
+                    <div class="form-group">
+                      <label for="productDescription" class="input-label">Description</label>
+                      <div style="-webkit-text-fill-color:rgb(48, 241, 241);" id="productDescription"></div>
                     </div>
                   </div>
-                </div>
 
-                <div class="btn btnArond">
-                  <a onclick="clearForm()">
-                    <button type="button" class="btn btn-warning">Clear</button>
-                  </a>
-                  <a href="#">
-                    <button type="button" class="btn button primary"><span>Submit</span></button>
-                  </a>
-                  <a href="./ProductList.html">
-                    <button type="button" class="btn btn-danger">Cancel</button>
-                  </a>
-                </div>
+                  <div class="row">
+                    <div class="form-group">
+                      <label class="input-label">Product Image</label>
+                      <div class="upload__box">
+                        <div class="upload__btn-box">
+                          <label class="upload__btn">
+                            <p>Upload images</p>
+                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                          </label>
+                        </div>
+                        <div class="upload__img-wrap"></div>
+                      </div>
+                    </div>
+                  </div>
 
-              </div>
-              <!-- Body -->
+                  <div class="btn btnArond">
+                    <a onclick="clearForm()">
+                      <button type="button" class="btn btn-warning">Clear</button>
+                    </a>
+                    <a href="#">
+                      <button type="button" class="btn button primary"><span>Submit</span></button>
+                    </a>
+                    <a href="./ProductList.html">
+                      <button type="button" class="btn btn-danger">Cancel</button>
+                    </a>
+                  </div>
+
+                </div>
+                <!-- Body -->
             </form>
           </div>
         </div>
@@ -303,6 +376,92 @@
     }
   </script>
 
+  <!-- ============= Disable Input CheckBox ===================== -->
+  <script>
+    $(function () {
+      enable_cb1();
+      $("#sizexs").click(enable_cb1);
+    });
+    function enable_cb1() {
+      if (this.checked) {
+        $("input.sizexs").removeAttr("disabled");
+      } else {
+        $("input.sizexs").attr("disabled", true);
+      }
+    }
+  </script>
+
+  <script>
+    $(function () {
+      enable_cb2();
+      $("#sizes").click(enable_cb2);
+    });
+    function enable_cb2() {
+      if (this.checked) {
+        $("input.sizes").removeAttr("disabled");
+      } else {
+        $("input.sizes").attr("disabled", true);
+      }
+    }
+  </script>
+
+  <script>
+    $(function () {
+      enable_cb3();
+      $("#sizem").click(enable_cb3);
+    });
+    function enable_cb3() {
+      if (this.checked) {
+        $("input.sizem").removeAttr("disabled");
+      } else {
+        $("input.sizem").attr("disabled", true);
+      }
+    }
+
+  </script>
+
+  <script>
+    $(function () {
+      enable_cb4();
+      $("#sizel").click(enable_cb4);
+    });
+    function enable_cb4() {
+      if (this.checked) {
+        $("input.sizel").removeAttr("disabled");
+      } else {
+        $("input.sizel").attr("disabled", true);
+      }
+    }
+  </script>
+
+  <script>
+    $(function () {
+      enable_cb5();
+      $("#sizexl").click(enable_cb5);
+    });
+    function enable_cb5() {
+      if (this.checked) {
+        $("input.sizexl").removeAttr("disabled");
+      } else {
+        $("input.sizexl").attr("disabled", true);
+      }
+    }
+  </script>
+
+  <script>
+    $(function () {
+      enable_cb6();
+      $("#sizexxl").click(enable_cb6);
+    });
+    function enable_cb6() {
+      if (this.checked) {
+        $("input.sizexxl").removeAttr("disabled");
+      } else {
+        $("input.sizexxl").attr("disabled", true);
+      }
+    }
+  </script>
+
   <!---------------  Import Header JS ---------------->
   <script type="module" src="../assets/js/importPage.js"></script>
 
@@ -313,6 +472,13 @@
       document.getElementById("form-addProduct").reset();
     }
   </script>
+  <script>
+    $('#productDescription').summernote({
+      tabsize: 2,
+      height: 200
+    });
+  </script>
+
 </body>
 
 </html>

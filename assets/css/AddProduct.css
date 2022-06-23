@@ -2,15 +2,16 @@
 
 .content-wrapper{
     align-items: center;
-    margin-top: -4% !important;
+    margin-top: -1.5% !important;
 
 }
 .btnArond{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    float: right;
 }
 .btnArond button{
+    padding: 10px 20px;
     margin: 20px 0px 0px 20px;
 }
 .btnArond .primary{
@@ -26,12 +27,41 @@
     margin: 30px 0px 5px 0;
 }
 
+
 .checkbox-size{
+    padding: 5px 30px;
     display: flex;
-    justify-content: center;
-    justify-items: space-around !important;
     width: 100%;
+    justify-content: space-around;
 }
+.size-left{
+    width: 33%;
+}
+.size-center{
+    margin: 0 40px;
+    width: 33%;
+}
+.size-right{
+    width: 33%;
+   
+}
+.size-wrap{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.size-wrap .size-tile{
+    width: 70px;
+}
+.size-wrap .size-tile input{
+    margin-top: 0;
+}
+.size-wrap .size-tile span{
+    margin-left: 5px;
+}
+/* .cost-box{
+    min-width: 100px;
+} */
 
 .check-inline{
     margin-top: 30px;
@@ -119,15 +149,54 @@
 /* ======== MEDIA ======== */
 @media (max-width: 495px){
     .btnArond{
+ 
         margin-top: 2rem;
         padding: 0;
         display: flex;
         justify-content: space-around;
     }
+    .size-left,
+    .size-center,
+    .size-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column!important;
+    }
+    .size-wrap .tile-right{
+        margin-left: 0px !important;
+    }
+    .cost-box{
+        min-width: 150px !important;
+    }
+}
+
+@media (max-width: 800px){
+    .checkbox-size{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .size-left,
+    .size-center,
+    .size-right {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .size-center{
+        margin: 0;
+    }
+
+    .size-wrap .tile-right{
+        margin-left: 50px;
+    }
+    .cost-box{
+        min-width: 100px;
+    }
 }
 
 @media (min-width: 1200px){
     .layout-page{
-        padding-left: 14.25rem;
+        padding-left: 14.5rem;
     }
   }

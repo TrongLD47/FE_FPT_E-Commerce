@@ -176,7 +176,7 @@ img {
 /* Dropdown */
 .nav__dropdown {
   overflow: hidden;
-  max-height: 23px;
+  /* max-height: 23px; */
   transition: .4s ease-in-out;
 }
 
@@ -217,14 +217,14 @@ img {
   
 }
 
-/* Rotate icon arrow */
+/* Rotate icon arrow
 .nav__dropdown:hover .nav__dropdown-icon {
   transform: rotate(180deg);
   background: var(--theme-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 
 /*===== Show menu =====*/

@@ -5,255 +5,188 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Product</title>
+  <title>RegisShop</title>
   <!------------ CSS core ------------ -->
   <link rel="stylesheet" href="../assets/vendor/css/core.css">
+  <link rel="stylesheet" href="/assets/css/components/header.css" />
+  <link rel="stylesheet" href="/assets/css/components/sideBar.css">
   <link rel="stylesheet" href="../assets/vendor/css/theme-default.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
 
   <link rel="stylesheet" href="../assets/css/RegisShop.css">
-  <link rel="stylesheet" href="../assets/css/components/sideBar.css">
-  <link rel="stylesheet" href="../assets/css/components/header.css" />
-  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!------------- Add Mutiple Image -------------->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
   <!--------------- form ------------------------------- -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <!-- CND JQUERY -->
-  <!-- <link rel="stylesheet" href="../assets/css/base.css" /> -->
-
-  <!-- import HTML to HTML -->
-  <!-- <script src="https://unpkg.com/htmlincludejs"></script> -->
-
+  <!-- FontAwsome -->
+  <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+  <!---------------  Import footer JS ---------------->
+  <script type="module" src="../assets/js/importPage.js"></script>
 </head>
 
 <body>
-  <header class="header-wrapper">
+  <header>
     <div class="header fixed-header">
-        <!-- Header - bottom -->
-        <div class="header-bottom">
+      <!-- Header - bottom -->
+      <div class="header-bottom">
 
-            <!-- Header-left -->
-            <ul class="header-bottom-left">
-                <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-                    <a class="menu-btn" href="javascript:void(0)" id="sidebarCollapse">
-                        <i class="bx bx-menu bx-sm"></i>
-                    </a>
-
-                </div>
-                <li class="header-bottom-logo">
-                    <a href="#">
-                        <img src="/assets/img/logo.svg" alt="logo" />
-                    </a>
-                </li>
-            </ul>
-            <!-- end Header-left -->
-            <!-- Header-right -->
-            <ul class="header-bottom-right">
-                <li class="header-bottom-right-item">
-                    <a href="#">
-                        <i class="far fa-bell"></i>
-                    </a>
-                </li>
-                <li class="header-bottom-right-item">
-                    <a href="#">
-                        <i class="fas fa-shopping-bag"></i>
-                    </a>
-                </li>
-                <li class="header-bottom-right-items user">
-                    <div class="header-bottom-right-item">
-                        <a href="#">
-                            <i class="far fa-user"></i>
-                        </a>
-                    </div>
-                    <div class="user-right">
-                        <a class="about-user" href="#">
-                            <span class="about-user-1">Tài khoản</span>
-                            <span class="about-user-2">Xin chào!</span>
-                        </a>
-                        <i class="fas fa-caret-down"></i>
-                    </div>
-                </li>
-            </ul>
-            <!-- end Header-right -->
-        </div>
+        <!-- Header-left -->
+        <ul class="header-bottom-left">
+          <li class="header-bottom-logo">
+            <a href="#">
+              <img src="/assets/img/logo.svg" alt="logo" />
+            </a>
+          </li>
+        </ul>
+        <!-- end Header-left -->
+        <!-- Header-right -->
+        <ul class="header-bottom-right">
+          <li class="header-bottom-right-item">
+            <a href="#">
+              <i class="far fa-bell"></i>
+            </a>
+          </li>
+          <li class="header-bottom-right-item">
+            <a href="#">
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </li>
+          <li class="header-bottom-right-items user">
+            <div class="header-bottom-right-item">
+              <a href="#">
+                <i class="far fa-user"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <!-- end Header-right -->
+      </div>
     </div>
-</header>
-  <div class="">
-    <div class="content-wrapper">
-      <div class="container-xxl flex-grow-1 container-p-y">
-        <div class="row">
-          <div class="col-sm-12 center-block col-xxl">
-            <form id="form-addProduct" class="card mb-3 mb-lg-5">
-              <!-- Header -->
-              <div class="card-header">
-                <h4 class="card-header-title">Product information</h4>
-              </div>
-              <!-- End Header -->
-
-              <!-- Body -->
-              <div class="card-body">
-                <!-- Form Group -->
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="form-group"><label for="" class="input-label">Shop Name <i class="tio-help-outlined text-body ml-1"
-                        data-toggle="tooltip" data-placement="top"
-                        title=""></i></label>
-  
-                    <input type="text" class="form-control" name="" id=""
-                      placeholder="Shirt, t-shirts, etc." aria-label="" /></div>
-                  
-                     </div>
-                    </div>
-                    <div class="big-row">
-                    <div class="row">
-                      <div class="col-sm-7">
-                        <div class="form-group">
-                          <label for="email" class="input-label">Email</label>
-                          <div class="input-group input-group-merge">
-                         
-                            <input type="email" id="email" class="form-control" placeholder="abc@gmail.com"
-                              />
-                            
-                          </div>
-                        </div>
-                          </div>
-                      </div>
-
-
-                   <div class="row">
-                      <div class="col-sm-7">
-                        <div class="form-group">
-                          <label for="numbertelephone" class="input-label">Number Telephone</label>
-                          <div class="input-group input-group-merge">
-                         
-                            <input type="number" id="numbertelephone" class="form-control" placeholder=""
-                              />
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <!-- End Form Group -->
-
-               
-                </div>
-
-           
-              
-                <!-- End Row -->
-               
-
-
-               
-
-                <div class="btn btnArond">
-                  <a onclick="clearForm()">
-                    <button type="button" class="btn btn-warning">Clear</button>
-                  </a>
-                  <a href="#">
-                    <button type="button" class="btn btn-primary">Submit</button>
-                  </a>
-                  <a href="./ProductList.html">
-                    <button type="button" class="btn btn-danger">Cancel</button>
-                  </a>
-                </div>
-
-              </div>
-              <!-- Body -->
-            </form>
-          </div>
+  </header>
+  <!-- Content wrapper -->
+  <div class="content-wrapper">
+    <!-- Content -->
+    <div class="vendor_block1">
+      <div class="intro">
+        <span>sao họ chọn FPT E-Commerce?</span>
+      </div>
+      <div class="row intro-group">
+        <div class="intro-item">
+          <i class="fa-solid fa-magnifying-glass-dollar"></i>
+          <h4>ĐỊNH VỊ VÀ NÂNG TẦM THƯƠNG HIỆU</h4>
+          <p>Dosiin là sàn thương mại điện tử dành cho giới trẻ đầu tiên lớn nhất ở Việt Nam, với gần 300 thương hiệu
+            đang hợp tác.</p>
+        </div>
+        <div class="intro-item">
+          <i class="fa-solid fa-user-tie"></i>
+          <h4>QUẢN LÝ BÁN HÀNG CHUYÊN NGHIỆP</h4>
+          <p>Trang quản lý cập nhật sản phẩm, kho hàng và đơn hàng, theo dõi doanh thu trực tiếp, giao diện dễ thao tác
+            và nhanh chóng, đối soát liên tục, liên kết với giao hàng chuyên nghiệp với GHTK. </p>
+        </div>
+        <div class="intro-item">
+          <i class="fa-solid fa-users"></i>
+          <h4>TIẾP CẬN TẬP KHÁCH HÀNG KHỔNG LỒ</h4>
+          <p>Website với hơn 2 triệu lượt truy cập mỗi tháng, hệ sinh thái Media tương tác cao với Fanpage Facebook lên
+            đến nữa triệu lượt like. Hướng thẳng mục tiêu đến đối tượng giới trẻ, 90% ở độ tuổi từ 16-24. </p>
+        </div>
+        <div class="intro-item">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>CHƯƠNG TRÌNH MARKETING DÀNH RIÊNG CHO BẠN</h4>
+          <p>Tăng doanh thu và độ phủ sóng thương hiệu với các chương trình Marketing thiết kế riêng cho từng thương
+            hiệu. Cơ hội được góp mặt trong các sự kiện và tạp chí xuất bản với lượt đọc giả online lên đến nữa triệu.
+          </p>
         </div>
       </div>
     </div>
+    <div class="vendor_block3">
+      <div class="intro">
+        <span>Trở thành đối tác của FPT E-Commerce</span>
+      </div>
+      <div class="co-operate">
+        <div class="co__video">
+          <video class="story" controls="" muted="" autoplay=""
+            poster="https://static.dosi-in.com/images/brand_page/hoptac/bg-video.png">
+            <source src="https://static.dosi-in.com/images/brand_page/hoptac/dosiin.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="co__form">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="form">
+            <h3>WELCOME TO FPT E-Commerce</h3>
+            <form id="frm_contact" action="/?dispatch=company_contacts.store" class="cm-processed-form">
+              <div class="form-group">
+                <label class="cm-email cm-required" for="email">Địa chỉ Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label class="cm-phone cm-required" for="phone">Số điện thoại</label>
+                <input id="phone" name="phone" type="number">
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label class="cm-required" for="name">Tên thương hiệu</label>
+                <input id="name" name="name" type="text">
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label class="cm-required" for="description">Thông tin liên hệ </label>
+                <input id="description" name="description" type="text">
+                <div class="error"></div>
+              </div>
+              <button class="btn primary button" type="submit">
+                <span>Gửi</span>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- / vendor2 -->
+    <div class="vendor_block4">
+      <div class="intro">
+        <span>CONTACT</span>
+      </div>
+      <div class="contact">
+        <a class="contact-user mail" href="mailto:Trongldde140257@fpt.edu.vn">
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <span>Trongldde140257@fpt.edu.vn</span>
+        </a>
+        <a class="contact-user phone" href="http://zalo.me/0908449577">
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <span>0933932517</span>
+        </a>
+      </div>
+    </div>
   </div>
-
-  <!-- ================= Upload Mutilple Image ===================== -->
-  <script>
-    jQuery(document).ready(function () {
-      ImgUpload();
-    });
-
-    function ImgUpload() {
-      var imgWrap = "";
-      var imgArray = [];
-
-      $('.upload__inputfile').each(function () {
-        $(this).on('change', function (e) {
-          imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
-          var maxLength = $(this).attr('data-max_length');
-
-          var files = e.target.files;
-          var filesArr = Array.prototype.slice.call(files);
-          var iterator = 0;
-          filesArr.forEach(function (f, index) {
-
-            if (!f.type.match('image.*')) {
-              return;
-            }
-
-            if (imgArray.length > maxLength) {
-              return false
-            } else {
-              var len = 0;
-              for (var i = 0; i < imgArray.length; i++) {
-                if (imgArray[i] !== undefined) {
-                  len++;
-                }
-              }
-              if (len > maxLength) {
-                return false;
-              } else {
-                imgArray.push(f);
-
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                  var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
-                  imgWrap.append(html);
-                  iterator++;
-                }
-                reader.readAsDataURL(f);
-              }
-            }
-          });
-        });
-      });
-
-      $('body').on('click', ".upload__img-close", function (e) {
-        var file = $(this).parent().data("file");
-        for (var i = 0; i < imgArray.length; i++) {
-          if (imgArray[i].name === file) {
-            imgArray.splice(i, 1);
-            break;
-          }
-        }
-        $(this).parent().parent().remove();
-      });
-    }
-  </script>
-
-  <!---------------  Import Header JS ---------------->
-  <script type="module" src="../assets/js/importPage.js"></script>
+  <!-- / Content -->
 
 
-  <!-- ============= Clear Button ============== -->
-  <script>
-    function clearForm() {
-      document.getElementById("form-addProduct").reset();
-    }
-  </script>
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="../assets/vendor/js/menu.js"></script>
+
+  <!-- Vendors JS -->
+  <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+
 </body>
+<footer>
+  <include src="./components/footer.html"></include>
+</footer>
 
 </html>

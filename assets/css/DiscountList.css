@@ -1,17 +1,12 @@
 @import url("../css/root.css");
 
-.layout-page {
-  margin-top: -2%;
+.content-wrapper {
+  margin-top: 1%;
 }
 
 .layout-demo-info {
   text-align: center;
   margin-top: 1rem;
-}
-
-.content-wrapper {
-  align-items: center;
-  margin-top: -1%;
 }
 
 .header-table {
@@ -38,7 +33,7 @@
 }
 
 @media (min-width: 1200px) {
-  .layout-page {
-    padding-left: 14.25rem;
+  .content-wrapper {
+    padding-left: 14.5rem;
   }
 }

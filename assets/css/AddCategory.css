@@ -6,7 +6,7 @@
 }
 .btnArond{
     float: right;
-   
+    margin-bottom: 1rem;
 }
 .btnArond button{
     margin-left: 20px;

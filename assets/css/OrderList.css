@@ -1,7 +1,7 @@
 @import url("../css/root.css");
 
-.layout-page {
-  margin-top: -2%;
+.content-wrapper {
+  margin-top: 1%;
 }
 
 .layout-demo-info {
@@ -67,9 +67,13 @@ table {
 .btnArond .primary {
   margin-top: 0px;
 }
-
+@media screen and (max-width: 767px) {
+  .dropdown-input {
+    width: 136px;
+  }
+}
 @media (min-width: 1200px) {
-  .layout-page {
-    padding-left: 14.25rem;
+  .content-wrapper {
+    padding-left: 14.5rem;
   }
 }

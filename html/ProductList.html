@@ -29,21 +29,18 @@
   <script src="../assets/vendor/js/helpers.js"></script>
   <!---------------  Import Header JS ---------------->
   <script type="module" src="../assets/js/importPage.js"></script>
-
-
 </head>
-
+<header>
+  <!-- ================= Import Header ============ -->
+  <include src="./components/Header.html"></include>
+</header>
 <body>
-  <header>
-    <!-- ================= Import Header ============ -->
-    <include src="./components/Header.html"></include>
-  </header>
 
-  <div class="layout-page">
+  <div class="">
     <!-- Content wrapper -->
     <div class="content-wrapper">
       <!-- Content -->
-      <div class="container-xxl flex-grow-1 container-p-y">
+      <div class=" flex-grow-1 container-p-y">
         <div class="row">
           <div class="col-xxl col-sm-12">
             <form class="" action="">
@@ -58,7 +55,7 @@
                         <option class="dropdown-item" value="2">Product ID</option>
                         <option class="dropdown-item" value="3">Size</option>
                       </select>
-                      <input type="text" class="form-control" aria-label="Text input with dropdown button" />
+                      <input type="text" class="form-control" aria-label="Text input search" placeholder="Search" />
                     </div>
                   </div>
 
@@ -92,6 +89,20 @@
                         aria-label="eg. 348121032">
                     </div>
 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <a href="#">
+                      <button type="button" class="button btn primary">
+                        <span>Search</span>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button type="button" class="btn btn-outline-secondary btn-clear">
+                        <span>Clear</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
 
@@ -237,6 +248,7 @@
       </div>
 
     </div>
+
     <!-- / Content -->
   </div>
 

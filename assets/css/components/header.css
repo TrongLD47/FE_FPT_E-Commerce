@@ -12,7 +12,7 @@ header a {
     margin: 0 !important;
   }
 .header-wrapper {
-    height: 5rem;
+    height: 3.5rem;
   }
   .fixed-header {
     position: fixed;
@@ -81,12 +81,7 @@ header a {
   .header-bottom-right-items i{
      font-size: 1.1rem;
   }
-  .header-bottom-right-item i:hover{
-    background: var(--theme-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  }
+
   .about-user {
     display: flex;
     flex-direction: column;
@@ -106,6 +101,13 @@ header a {
     border-radius: 50%;
     border:1px solid rgba(16,16,16,.05);
     background: rgba(16,16,16,.05098);
+  }
+  
+  .header-bottom-right-item:hover{
+    background: var(--theme-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .header-bottom-right-item i {
     font-size: 1.2rem;

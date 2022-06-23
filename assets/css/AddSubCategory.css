@@ -9,7 +9,8 @@
    
 }
 .btnArond button{
-    margin-left: 20px;
+    margin: 0 10px; 
+    margin-bottom: 1rem;
 }
 .dropdown-cate{
     margin-bottom: 20px;
