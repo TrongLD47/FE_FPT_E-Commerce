@@ -60,7 +60,9 @@ a {
 .btn.btn-primary i {
   fill: var(--theme-color);
 }
-.text-hover {
+.text-hover,
+.menu-hover,
+.menu-hover span {
   cursor: pointer;
   background: transparent;
   transition: color 0.5s ease-in, background 0.5s ease-in;
@@ -71,7 +73,9 @@ a {
 .btn.btn-badge i,
 .btn.btn-badge span,
 .btn.btn-badge-border i,
-.btn.btn-badge-border span {
+.btn.btn-badge-border span,
+.text-hover:hover span,
+.menu-hover:hover span {
   color: var(--theme-color);
   background: var(--theme-color);
   -webkit-background-clip: text;
@@ -85,7 +89,9 @@ a {
 }
 .page-link.current span,
 .btn.btn-primary span,
-.btn.btn-primary i {
+.btn.btn-primary i,
+.btn.btn-primary-no-fill,
+.btn.btn-primary-no-fill i {
   background: var(--theme-color);
   -webkit-background-clip: text;
   background-clip: text;
