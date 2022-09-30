@@ -13,7 +13,11 @@
   <link rel="stylesheet" href="../assets/css/AddProduct.css">
   <!------------- Add Mutiple Image -------------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
   <!--------------- form ------------------------------- -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,107 +169,52 @@
                   <div class="col-sm-12">
                     <div class="form-group ">
                       <label class="input-label d-block">Size</label>
-                      <div class="checkbox-size">
-
-                        <div class="size-left">
-                          <div class="size-wrap ">
-                            <div class="size-tile">
-                              <input type="checkbox" value="sizexs" class="form-check-input check-inline  check item"
-                                id="sizexs">
-                              <span>XS</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
+                      <form method="post" action="#">
+                        <!-- enctype="multipart/form-data" oninput="price.value=parseFloat(rate.value)*parseFloat(qty.value)" -->
+                        <div class="grid-body no-border">
+                          <br>
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <div class="row">
                                 <div class="">
-                                  <input type="number" class="form-control sizexs" placeholder="Enter Quantity" />
+                                  <table class="table invoice-items" id="dynamic_field">
+                                    <thead>
+                                      <tr class="h4 text-dark">
+                                        <th id="cell-item" class="text-semibold">
+                                          Size
+                                        </th>
+                                        <th id="cell-item" class="text-semibold">
+                                          Color
+                                        </th>
+                                        <th id="cell-item" class="text-semibold">
+                                          Quantity
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <input type="text" name="InputSize" id="InputSize" class="form-control">
+                                        </td>
+                                        <td>
+                                          <input type="text" name="InputColor" id="InputColor" class="form-control">
+                                        </td>
+                                        <td>
+                                          <input type="number" name="Inputqty" id="Inputqty" min="1" class="form-control">
+                                        </td>
+                                        <td>
+                                          <button type="button" name="add" id="add" class="btn button primary"
+                                            style="margin: auto 0;"><span>Add
+                                              More</span></button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="size-wrap">
-                            <div class="size-tile tile-right">
-                              <input type="checkbox" id="sizes" value="sizes"
-                                class="form-check-input check-inline  check item">
-                              <span>S</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
-                                <div class="">
-                                  <input type="number" class="form-control sizes" placeholder="Enter Quantity" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-
-                        <div class="size-center">
-                          <div class="size-wrap ">
-                            <div class="size-tile">
-                              <input type="checkbox" id="sizem" value="sizem"
-                                class="form-check-input check-inline  check item">
-                              <span>M</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
-                                <div class="">
-                                  <input type="number" class="form-control sizem" placeholder="Enter Quantity" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="size-wrap ">
-                            <div class="size-tile tile-right">
-                              <input type="checkbox" id="sizel" value="sizel"
-                                class="form-check-input check-inline  check item">
-                              <span>L</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
-                                <div class="">
-                                  <input type="number" name="qty" class="sizel form-control"
-                                    placeholder="Enter Quantity" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="size-right">
-                          <div class="size-wrap ">
-                            <div class="size-tile ">
-                              <input type="checkbox" id="sizexl" value="sizexl"
-                                class="form-check-input check-inline  check item">
-                              <span>XL</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
-                                <div class="">
-                                  <input type="number" class="sizexl form-control" placeholder="Enter Quantity" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="size-wrap ">
-                            <div class="size-tile tile-right">
-                              <input type="checkbox" id="sizexxl" value="sizexxl"
-                                class="form-check-input check-inline  check item">
-                              <span>XXL</span>
-                            </div>
-                            <div class="">
-                              <div class=" cost-box">
-                                <div class="">
-                                  <input type="number" class="sizexxl form-control" placeholder="Enter Quantity" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                        </div>
-
-                      </div>
+                      </form>
                     </div>
                   </div>
 
@@ -311,7 +260,7 @@
       </div>
     </div>
   </div>
-  
+
   <script src="../assets/js/AddProduct.js"></script>
 
   <!---------------  Import Header JS ---------------->

@@ -17,12 +17,17 @@
   <!-- require -->
   <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="../assets/css/components/setting.css" />
-  <link rel="stylesheet" href="../assets/css/breadcrumb.css" />
   <link rel="stylesheet" href="../assets/css/components/footer.css" />
-  <link rel="stylesheet" href="../assets/css/components/modal.css" />
-  <link rel="stylesheet" href="../assets/css/components/pagination.css" />
+  <link rel="stylesheet" href="../assets/css/user-cart.css">
+  <!-- <link rel="stylesheet" href="../assets/css/user-Order.css"> -->
   <title>User Order</title>
 </head>
+
+<style>
+  .btn-inner {
+    text-align: center;
+  }
+</style>
 
 <body>
   <!-- Header -->
@@ -60,11 +65,7 @@
               <span class="header-bottom-item-text text-hover active">Shopping</span>
             </a>
           </li>
-          <li class="header-bottom-item">
-            <a href="#">
-              <span class="header-bottom-item-text text-hover">Style</span>
-            </a>
-          </li>
+
         </ul>
         <!-- end Header-left -->
         <!-- Header-center -->
@@ -187,35 +188,28 @@
       <div class="setting__right">
         <div class="user-info" id="user-order">
           <ul class="tab-list">
-            <li class="tab-item text-hover active">
-              <a href="#">Tất cả</a>
+            <li class="tab-item  text-hover active">
+              <a class="tab-subItem">Tất cả</a>
+            </li>
+            <li class=" tab-item text-hover">
+              <a class="tab-subItem">Chờ xác nhận</a>
+            </li>
+            <li class=" tab-item text-hover">
+              <a class="tab-subItem">Đang giao</a>
             </li>
             <li class="tab-item text-hover">
-              <a href="#">Chờ xác nhận</a>
+              <a class="tab-subItem">Đã giao</a>
             </li>
             <li class="tab-item text-hover">
-              <a href="#">Chờ lấy hàng</a>
-            </li>
-            <li class="tab-item text-hover">
-              <a href="#">Đang giao</a>
-            </li>
-            <li class="tab-item text-hover">
-              <a href="#">Đã giao</a>
-            </li>
-            <li class="tab-item text-hover">
-              <a href="#">Đã hủy</a>
+              <a class="tab-subItem">Đã hủy</a>
             </li>
           </ul>
           <div class="order-box-list">
             <div class="order-box box">
               <div class="order-box__top">
                 <div class="order__user-info">
-                  <span class="order__user-info__badge">Yêu thích</span>
                   <span class="order__user-info__brand">Nguyen Tran Shop</span>
-                  <a class="order__chat btn btn-badge">
-                    <i class="far fa-comment-dots"></i>
-                    <span class="order__chat-text">Chat</span>
-                  </a>
+
                   <a class="btn btn-badge-border" href="./shop.html">
                     <div class="btn-inner">
                       <i class="fa-solid fa-store"></i>
@@ -228,12 +222,7 @@
                     <div class="order__product-state__icon"><i class="fas fa-truck"></i></div>
                     <div class="order__product-state__text">Đang trong quá trình giao hàng</div>
                   </div>
-                  <div class="order__state-display__icon"><i class="fas fa-info-circle"></i>
-                    <span class="order__popup">
-                      Cập Nhật Mới Nhất
-                      <br />
-                      14:39 11-06-2022</span>
-                  </div>
+
                   <div class="v-divider"></div>
                   <div class="order__state-display__state text-highlight">đang giao</div>
                 </div>
@@ -242,36 +231,33 @@
               <div class="order-box__mid">
                 <div class="order-box__mid-left">
                   <div class="order-box__product">
-                    <div class="order-product__img"><img src="../assets/img/product/card2.webp" width="85px" height="85px" />
+                    <div class="order-product__img"><img src="../assets/img/product/card2.webp" width="85px"
+                        height="85px" />
                     </div>
                     <div class="order-product__detail">
                       <div class="order-product__name">Name Of Product Here</div>
-                      <div class="order-product__description">Description Of Product Here</div>
-                      <div class="order-product__quantity">x<span>2</span></div>
-                    </div>
-                  </div>
-                  <div class="order-box__product">
-                    <div class="order-product__img order-product__img--gift">
-                      <img src="../assets/img/product/card2.webp" width="50px" height="50px" />
-                    </div>
-                    <div class="order-product__detail">
-                      <div class="order-product__name">
-                        <a class="btn btn-badge-border">
-                          <div class="btn-inner">
-                            <span>Quà tặng</span>
-                          </div>
-                        </a>
-                        Name Of Product Here
-                      </div>
-                      <div class="order-product__description">Description Of Product Here</div>
-                      <div class="order-product__quantity">x<span>2</span></div>
+                      <div class="order-product__description">Size: <span>S</span></div>
+                      <div class="order-product__description">Color <span>Red</span></div>
+
                     </div>
                   </div>
 
+
+
                 </div>
+
+
+                <div class="order-box__mid-midle">
+                  <div class="product__quantity-wrapper button-container">
+                    <span class="order-product__description">Số lượng: </span>
+                    <span class="product__quantity qty"> 1</span>
+                  </div>
+                </div>
+
                 <div class="order-box__mid-right">
-                  <div class="order-product__price--old price--old">53.313đ</div>
-                  <div class="order-product__price--new text-highlight">51.313đ</div>
+                  <div class="order-product__price--old">53.313đ</div>
+                  <div class="discountPercent"><i>-</i>10<i>%</i></div>
+                  <div class="order-product__price--new text-highlight price">51.313đ</div>
                 </div>
               </div>
               <div class="order-box__bot">
@@ -281,18 +267,173 @@
                   <span class="order-box__total-price text-highlight">51.313đ</span>
                 </div>
                 <div class="order-box__next-actions">
-                  <div class="order-box__next-actions__text">Đang chờ người bán đánh giá</div>
+                  <div class="order-box__next-actions__text"></div>
                   <div class="order-box__next-actions__button-list"><a class="btn btn-badge">
                       <span>Mua lại</span>
                     </a>
                     <a class="btn btn-badge-border">
                       <div class="btn-inner">
-                        <span>Liên hệ người bán</span>
+                        <span>
+                          Đã Nhận
+                        </span>
                       </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-box-list">
+            <div class="order-box box">
+              <div class="order-box__top">
+                <div class="order__user-info">
+                  <span class="order__user-info__brand">Nguyen Tran Shop</span>
+
+                  <a class="btn btn-badge-border" href="./shop.html">
+                    <div class="btn-inner">
+                      <i class="fa-solid fa-store"></i>
+                      <span class="order__chat-text">Xem shop</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="order__state-display">
+                  <div class="order__product-state">
+                    <div class="order__product-state__icon"><i class="fas fa-truck"></i></div>
+                    <div class="order__product-state__text">Đang trong quá trình giao hàng</div>
+                  </div>
+
+                  <div class="v-divider"></div>
+                  <div class="order__state-display__state text-highlight">đang giao</div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="order-box__mid">
+                <div class="order-box__mid-left">
+                  <div class="order-box__product">
+                    <div class="order-product__img"><img src="../assets/img/product/card2.webp" width="85px"
+                        height="85px" />
+                    </div>
+                    <div class="order-product__detail">
+                      <div class="order-product__name">Name Of Product Here</div>
+                      <div class="order-product__description">Size: <span>S</span></div>
+                      <div class="order-product__description">Color <span>Red</span></div>
+
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+
+                <div class="order-box__mid-midle">
+                  <div class="product__quantity-wrapper button-container">
+                    <span class="order-product__description">Số lượng: </span>
+                    <span class="product__quantity qty"> 1</span>
+                  </div>
+                </div>
+
+                <div class="order-box__mid-right">
+                  <div class="order-product__price--old">53.313đ</div>
+                  <div class="discountPercent"><i>-</i>10<i>%</i></div>
+                  <div class="order-product__price--new text-highlight price">51.313đ</div>
+                </div>
+              </div>
+              <div class="order-box__bot">
+                <div class="order-box__total">
+                  <span class="order-box__icon-right"><i class="fas fa-shield-alt text-highlight"></i></span>
+                  <span class="order-box__total-text">Tổng số tiền:</span>
+                  <span class="order-box__total-price text-highlight">51.313đ</span>
+                </div>
+                <div class="order-box__next-actions">
+                  <div class="order-box__next-actions__text"></div>
+                  <div class="order-box__next-actions__button-list"><a class="btn btn-badge">
+                      <span>Mua lại</span>
                     </a>
                     <a class="btn btn-badge-border">
                       <div class="btn-inner">
-                        <span>Xem đánh giá shop</span>
+                        <span>
+                          Đã Nhận
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-box-list">
+            <div class="order-box box">
+              <div class="order-box__top">
+                <div class="order__user-info">
+                  <span class="order__user-info__brand">Nguyen Tran Shop</span>
+
+                  <a class="btn btn-badge-border" href="./shop.html">
+                    <div class="btn-inner">
+                      <i class="fa-solid fa-store"></i>
+                      <span class="order__chat-text">Xem shop</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="order__state-display">
+                  <div class="order__product-state">
+                    <div class="order__product-state__icon"><i class="fas fa-truck"></i></div>
+                    <div class="order__product-state__text">Đang trong quá trình giao hàng</div>
+                  </div>
+
+                  <div class="v-divider"></div>
+                  <div class="order__state-display__state text-highlight">đang giao</div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="order-box__mid">
+                <div class="order-box__mid-left">
+                  <div class="order-box__product">
+                    <div class="order-product__img"><img src="../assets/img/product/card2.webp" width="85px"
+                        height="85px" />
+                    </div>
+                    <div class="order-product__detail">
+                      <div class="order-product__name">Name Of Product Here</div>
+                      <div class="order-product__description">Size: <span>S</span></div>
+                      <div class="order-product__description">Color <span>Red</span></div>
+
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+
+                <div class="order-box__mid-midle">
+                  <div class="product__quantity-wrapper button-container">
+                    <span class="order-product__description">Số lượng: </span>
+                    <span class="product__quantity qty"> 1</span>
+                  </div>
+                </div>
+
+                <div class="order-box__mid-right">
+                  <div class="order-product__price--old">53.313đ</div>
+                  <div class="discountPercent"><i>-</i>10<i>%</i></div>
+                  <div class="order-product__price--new text-highlight price">51.313đ</div>
+                </div>
+              </div>
+              <div class="order-box__bot">
+                <div class="order-box__total">
+                  <span class="order-box__icon-right"><i class="fas fa-shield-alt text-highlight"></i></span>
+                  <span class="order-box__total-text">Tổng số tiền:</span>
+                  <span class="order-box__total-price text-highlight">51.313đ</span>
+                </div>
+                <div class="order-box__next-actions">
+                  <div class="order-box__next-actions__text"></div>
+                  <div class="order-box__next-actions__button-list"><a class="btn btn-badge">
+                      <span>Mua lại</span>
+                    </a>
+                    <a class="btn btn-badge-border">
+                      <div class="btn-inner">
+                        <span>
+                          Đã Nhận
+                        </span>
                       </div>
                     </a>
                   </div>
@@ -373,7 +514,7 @@
             <li class="block_item"><a class="block_link" href="#">Chính sách thành viên</a></li>
             <li class="block_item">
               <a class="block_link" href="#">Chính sách thanh toán</a>
-            </li> 
+            </li>
             <li class="block_item">
               <a class="block_link" href="#">Chính sách bảo mật thanh toán</a>
             </li>
@@ -426,8 +567,8 @@
               </div>
             </li>
           </ul>
-       
-      
+
+
         </div>
       </div>
     </div>
@@ -437,7 +578,7 @@
   </footer>
   <!-- ----------------- End FOOTER---------------------- -->
 
-  <!-- <script src="../assets/js/changeOrderTabs.js"></script> -->
+  <script src="../assets/js/changeOrderTabs.js"></script>
 </body>
 
 </html>

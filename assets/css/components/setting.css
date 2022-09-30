@@ -207,7 +207,9 @@
   border: 1px solid var(--warning);
 }
 .user-info .form-group input:read-only:not([type="checkbox"], [type="radio"]),
-.user-info .form-group textarea:read-only:not([type="checkbox"], [type="radio"]) {
+.user-info
+  .form-group
+  textarea:read-only:not([type="checkbox"], [type="radio"]) {
   border: none;
   cursor: not-allowed;
 }
@@ -403,8 +405,8 @@
   height: 1rem;
   border-radius: 50%;
   background: #fff;
-  transition: width 0.15s ease-in-out, height 0.15s ease-in-out, left 0.15s ease-in-out,
-    top 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out, height 0.15s ease-in-out,
+    left 0.15s ease-in-out, top 0.15s ease-in-out;
 }
 .gender__item-list .gender__item [type="radio"] {
   display: none;
@@ -558,7 +560,7 @@
 }
 .tab-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   background-color: #fff;
   margin: 1rem 0;
 }
